@@ -1,0 +1,16 @@
+<%= form_for :session, url: session_path do |form| %>
+  <div>
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+  </div>
+  <div>
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+  </div>
+  <div>
+    <%= form.submit "Sign in", root_path %>
+    <%= button_to "Sign out", sessions/new method: delete %>
+    <% if !current_user.signed_in? %>
+    <%= button_to "Sign up", sign_up_path %>
+  </div>
+<% end %>
