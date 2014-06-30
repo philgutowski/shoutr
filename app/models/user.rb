@@ -13,4 +13,8 @@ class User < ActiveRecord::Base
   def unfollow(other_user)
     followed_users.destroy(other_user)
   end
+
+  def following?(other_user)
+    followed_user_ids.include?(other_user.id)
+  end
 end
