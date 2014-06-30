@@ -1,4 +1,6 @@
 <%= form_for @shout do |form| %>
   <%= form.text_area :body, placeholder: "Compose new shout" %>
   <%= form.submit "Send shout" %>
+
 <% end %>
+<p>I'm <%= link_to "following", :following %></p>

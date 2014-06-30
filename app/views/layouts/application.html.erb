@@ -9,11 +9,13 @@
 <body>
 
 <% if signed_in? %>
+  <p>You are signed in as,
   <%= link_to current_user.email, current_user %>
+  </p>
   <%= button_to "Sign out", :session, method: :delete %>
 <% else %>
-  <%= link_to "Sign up", sign_up_path %>
-  <%= link_to "Sign in", root_path %>
+  <p>New user? <%= link_to "Sign up!", sign_up_path %></p>
+  <p>Otherwise,  <%= link_to "Sign in!", root_path %></p>
 <% end %>
 
 <%= yield %>

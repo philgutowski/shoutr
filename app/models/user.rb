@@ -9,4 +9,8 @@ class User < ActiveRecord::Base
   def follow(other_user)
     followed_users << other_user
   end
+
+  def unfollow(other_user)
+    followed_users.destroy(other_user)
+  end
 end

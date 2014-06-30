@@ -1,4 +1,5 @@
 <%= button_to "Follow #{@user.email}", [@user, :following_relationship] %>
+<%= link_to "Back to dashboard", :dashboard  %>
 <ul>
 <%= render @shouts %>
 </ul>
