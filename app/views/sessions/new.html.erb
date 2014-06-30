@@ -8,9 +8,6 @@
     <%= form.password_field :password %>
   </div>
   <div>
-    <%= form.submit "Sign in", root_path %>
-    <%= button_to "Sign out", sessions/new method: delete %>
-    <% if !current_user.signed_in? %>
-    <%= button_to "Sign up", sign_up_path %>
+    <%= form.submit "Sign in" %>
   </div>
 <% end %>
