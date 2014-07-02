@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140702145841) do
+ActiveRecord::Schema.define(version: 20140702150735) do
 
   create_table "create_image_subjects", force: true do |t|
     t.string   "url"
@@ -29,6 +29,12 @@ ActiveRecord::Schema.define(version: 20140702145841) do
   add_index "following_relationships", ["followed_user_id"], name: "index_following_relationships_on_followed_user_id"
   add_index "following_relationships", ["follower_id"], name: "index_following_relationships_on_follower_id"
 
+  create_table "image_subjects", force: true do |t|
+    t.string   "url",        null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "shouts", force: true do |t|
     t.integer  "user_id",      null: false
     t.datetime "created_at"
@@ -44,8 +50,9 @@ ActiveRecord::Schema.define(version: 20140702145841) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "email"
-    t.string   "password_digest"
+    t.string   "username",        null: false
+    t.string   "email",           null: false
+    t.string   "password_digest", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

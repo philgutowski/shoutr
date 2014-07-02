@@ -14,8 +14,8 @@
 <h2>and yell at them</h2>
 </section>
 <% if signed_in? %>
-  <p>You are signed in as,
-  <%= link_to current_user.email, current_user %>
+  <p>Welcome, 
+  <%= link_to current_user.username, current_user.username.to_param %>!
   </p>
   <%= button_to "Sign out", :session, method: :delete %>
 <% else %>

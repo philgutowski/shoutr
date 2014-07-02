@@ -3,10 +3,10 @@
 <%= form.submit "Send shout" %>
 <% end %>
 
-<%# <%= form_for @image_subject do |form| %>
-<%#   <%= form.text_field :url, placeholder: "Enter image url" %>
-<%# <%= form.submit "Send image shout" %>
-<%# <% end %>
+<%= form_for @image_subject do |form| %>
+  <%= form.text_field :url, placeholder: "Enter image url" %>
+<%= form.submit "Send image shout" %>
+<% end %>
 
 <ul>
   <li>I'm <%= link_to "following", :following %></li>

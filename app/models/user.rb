@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  validates :username, presence: true
+
   has_many :shouts
 
   has_many :followed_user_relationships,
