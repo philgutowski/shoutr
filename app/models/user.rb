@@ -30,7 +30,9 @@ class User < ActiveRecord::Base
 
   def timeline
     @timeline = Shout.where(user: followed_users).order(created_at: :desc)
-
   end
-  
+
+  def to_param
+    username
+  end
 end

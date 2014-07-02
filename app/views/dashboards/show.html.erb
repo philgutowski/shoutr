@@ -16,8 +16,9 @@
 <section class = shouts>
   <h2>Latest Shouts</h2>
   <div class = display_shouts>
+    <%= paginate @timeline %> 
     <ul>
-      <%= render @timeline %> 
+      <%= render @timeline %>
     </ul>
   </div>
 </section>
