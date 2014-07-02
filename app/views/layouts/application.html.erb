@@ -4,10 +4,15 @@
   <title>Shoutr</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href='http://fonts.googleapis.com/css?family=Alfa+Slab+One' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<section class="header">
+<h1>Shoutr</h1>
+<h2>make new friends</h2>
+<h2>and yell at them</h2>
+</section>
 <% if signed_in? %>
   <p>You are signed in as,
   <%= link_to current_user.email, current_user %>

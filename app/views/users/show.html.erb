@@ -1,8 +1,4 @@
-<% if current_user.following?(@user) %>
-  <%= button_to "unfollow #{@user.email}", [@user, :following_relationship], method: :delete %>
-<% else %>
-  <%= button_to "follow #{@user.email}", [@user, :following_relationship] %>
-<% end %>
+<%= render 'follow_buttons', user: @user %>
 <%= link_to "Back to dashboard", :dashboard  %>
 <ul>
   <%= render @shouts %>

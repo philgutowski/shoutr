@@ -6,7 +6,9 @@ Rails.application.routes.draw do
     resource :following_relationship, only: [:create, :destroy]
   end
   resources :shouts, only: [:create]
+  resources :text_subjects, only: [:create]
   resource :following, only: [:show]
+  resource :followers, only: [:show]
 
   get "/sign_up", to: "users#new"
 
