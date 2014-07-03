@@ -1,0 +1,58 @@
+body {
+  background-color: rgb(255, 255, 240);
+}
+
+h2 {
+  background-color: rgb(241, 176, 60);
+  margin: 15px;
+  padding: 5px;
+}
+
+.subtitles {
+  // position: relative;
+  width: 400px;
+  text-align: center;
+
+}
+
+.header {
+  #shoutr-title {
+    margin-top: -100px;
+    margin-left: 150px;
+  }
+  #box-one {
+    margin-left: 300px;
+    margin-top: -37px;
+  }
+  #box-two {
+    margin-top: -85px;
+    margin-left: 112px;
+  }
+
+  #down-arrow {
+    margin-left: 6px;
+  }
+  #right-turn-arrow {
+    margin-bottom: -30px;
+    margin-left: -80px;
+  }
+  #curly-arrow {
+    margin-bottom: -28px;
+    margin-right: 95px;
+  }
+  #box-one {
+  }
+  #signup {
+    margin-left: 200px;
+    margin-top: 30px;
+  }
+  
+  #signin {
+    margin-left: 260px;
+    margin-top: 30px;
+  }
+  #loop-arrow {
+    margin-left: -80px;
+    margin-top: -40px;
+  }
+}
