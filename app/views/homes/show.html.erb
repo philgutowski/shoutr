@@ -1,0 +1,35 @@
+
+<section class="header">
+  <div id="shoutr-title">
+    <%= image_tag("down-arrow.png", :id => "down-arrow") %>
+    <h1>Shoutr</h1>
+  </div>
+
+  <div id="box-one" class="subtitles">
+    <%= image_tag("right_turn_arrow.png", :id => "right-turn-arrow") %>
+    <h2>make new friends,</h2>
+  </div>
+
+  <div id="box-two" class="subtitles">
+    <%= image_tag("curly-arrow.png", :id => "curly-arrow") %>
+    <h2>then yell at them</h2>
+  </div>
+
+  <div id="signup" class="subtitles">
+    <h2><%= link_to "Sign up!", sign_up_path %></h2>
+  </div>
+
+  <div id="signin" class="subtitles">
+    <h2><%= link_to "Sign in!", sign_in_path %></h2>
+  </div>
+  <%= image_tag("loop-arrow.png", :id => "loop-arrow") %>
+</section>
+
+<section class="all-shouts">
+  <div class="display_shouts">
+  <h3>Latest Shouts!</h3>
+    <ul>
+      <%= render @all_shouts %>
+    </ul>
+  </div>
+</section>

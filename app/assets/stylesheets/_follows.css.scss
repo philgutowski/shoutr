@@ -1,0 +1,7 @@
+.follows {
+  @include outer-container;
+  .follows-list {
+    @include span-columns(6);
+    @include shift(5);
+  }
+}

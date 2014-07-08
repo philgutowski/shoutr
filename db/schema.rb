@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140702150735) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "create_image_subjects", force: true do |t|
     t.string   "url"
     t.datetime "created_at"
@@ -26,8 +29,8 @@ ActiveRecord::Schema.define(version: 20140702150735) do
     t.datetime "updated_at"
   end
 
-  add_index "following_relationships", ["followed_user_id"], name: "index_following_relationships_on_followed_user_id"
-  add_index "following_relationships", ["follower_id"], name: "index_following_relationships_on_follower_id"
+  add_index "following_relationships", ["followed_user_id"], name: "index_following_relationships_on_followed_user_id", using: :btree
+  add_index "following_relationships", ["follower_id"], name: "index_following_relationships_on_follower_id", using: :btree
 
   create_table "image_subjects", force: true do |t|
     t.string   "url",        null: false

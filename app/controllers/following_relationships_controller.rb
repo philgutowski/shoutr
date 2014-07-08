@@ -1,6 +1,6 @@
 class FollowingRelationshipsController < ApplicationController
 def create
-  followed_user = User.find(params[:user_id])
+  followed_user = User.find_by(params[:username])
   current_user.follow(followed_user)
 
   redirect_to :back

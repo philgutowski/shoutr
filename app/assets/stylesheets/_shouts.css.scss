@@ -1,0 +1,25 @@
+.all-shouts {
+  margin-top: 25px;
+}
+
+.display_shouts {
+  h3 {
+    margin-left: 150px;
+  }
+}
+
+.shout {
+  background-color: rgba(200, 200, 200, .3);
+  width: 40%;
+  padding: 5px 10px;
+  margin: 25px;
+  margin-left: 150px;
+  img {
+    max-width: 300px;
+    margin: 10px;
+  }
+}
+
+.breadcrumbs {
+  font-size: .7em;
+}

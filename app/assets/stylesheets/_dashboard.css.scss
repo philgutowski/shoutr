@@ -1,0 +1,55 @@
+.dashboard-container {
+  @include outer-container;
+}
+
+.forms {
+  @include span-columns(4);
+  .new-text-shout {
+    margin: 20px;
+  }
+  .new-image-shout {
+    margin: 20px;
+  }
+  .search {
+        margin: 20px;
+      }
+}
+
+.all-shouts-dash {
+  @include span-columns(8);
+  margin-top: 20px;
+  .follow {
+    ul {  
+      margin-top: -14px;
+    }
+    li {
+      @include span-columns(6);
+      text-align: center;
+      margin: 15px;
+      width: 45%;
+      background-color: $base-link-color;
+      padding: 5px;
+      a {
+        color: $light-gray;
+      }
+      a:hover {
+        background-color: $hover-link-color;
+      }
+    }
+  }
+  .display-shouts-dash {
+    width: 90%;
+    text-align: center;
+    h3 {
+      margin: 25px;
+      padding-top: 50px;
+    }
+    .shout {
+      width: 80%;
+      margin-left: 10%;
+    }
+    .pagination {
+      margin: 15px;
+    }
+  }
+}
