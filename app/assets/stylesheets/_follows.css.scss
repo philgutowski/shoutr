@@ -1,7 +1,11 @@
 .follows {
   @include outer-container;
-  .follows-list {
-    @include span-columns(6);
-    @include shift(5);
+}
+.follows-list {
+  @include span-columns(6);
+  @include shift(1);
+  li {
+    padding: 20px;
+    font-size: 2em;
   }
 }

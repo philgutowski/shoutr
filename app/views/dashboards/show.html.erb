@@ -3,14 +3,16 @@
   <section class="forms">
     <div class="new-text-shout">
       <%= form_for @text_subject do |form| %>
-        <%= form.text_area :body, placeholder: "Compose new text shout" %>
+        <%= form.label :body, "Compose new shout!" %>
+        <%= form.text_area :body, placeholder: "your message here" %>
       <%= form.submit "Send shout" %>
     <% end %>
     </div>
 
     <div class="new-image-shout">
       <%= form_for @image_subject do |form| %>
-        <%= form.text_field :url, placeholder: "Enter image url" %>
+        <%= form.label :url, "Make a new image shout!" %>
+        <%= form.text_field :url, placeholder: "enter image url" %>
       <%= form.submit "Send image shout" %>
     <% end %>
     </div>
@@ -18,7 +20,7 @@
     <div class="search">
       <%= form_tag :search, method: "get" do %>
         <%= label_tag :username, "Search for users" %>
-      <%= text_field_tag :username, params[:username] %>
+      <%= text_field_tag :username, params[:username], placeholder: "or leave blank to search all users" %>
       <%= submit_tag :Search %>
     <% end %>
     </div>
@@ -42,5 +44,12 @@
         <%= render @timeline %>
       </ul>
     </div>
-  </section>
+
+    <div class="display-shouts-dash">
+    <h3>Latest shouts from all users!</h3>
+      <ul>
+        <%= render @all_shouts %>
+      </ul>
+    </div>
+    </section>
 </section>
