@@ -8,7 +8,7 @@ class FollowingRelationship < ActiveRecord::Base
 
   def user_is_not_following_themselves
     if follower_id == followed_user_id
-    errors.add(:base, "Users cannot follow themselves")
+      errors.add(:base, "Users cannot follow themselves")
     end
   end
 end

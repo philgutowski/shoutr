@@ -1,4 +1,5 @@
 <%= render 'follow_buttons', user: @user %>
+<h3>Latest shouts from <%= @user.username %>!</h3>
 <%= link_to "Back to dashboard", :dashboard  %>
 <ul>
   <%= render @shouts %>
