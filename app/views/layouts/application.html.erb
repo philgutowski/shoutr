@@ -3,25 +3,32 @@
 <head>
 <title>Shoutr</title>
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<link rel="stylesheet" href="http://i.icomoon.io/public/temp/616364e599/UntitledProject1/style.css">
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 <%= csrf_meta_tags %>
 </head>
 <body>
 <section class="mainheader">
-<div class="title">
-  <h1><%= link_to "Shoutr", "/", id: "shoutr-logo" %></h1>
-</div>
+  <div class="title">
+    <h1><%= link_to "Shoutr", "/", id: "shoutr-logo" %></h1>
+  </div>
 
-<div class="login">
-<% if signed_in? %>
-<p>Welcome,
-<%= link_to current_user.username, current_user %>!
-<%= button_to "Sign out", :session, method: :delete %>
-</p>
-<% end %>
-</div>
+  <div class="social">
+    <a href="http://twitter.com/liveeastie"><span class="icon-twitter"></span></a>
+    <a href="http://philgutowski.tumblr.com"><span class="icon-tumblr"></span></a>
+    <a href="http://github.com/chukdisc"><span class="icon-github"></span></a>
+  </div>
+
+  <div class="login">
+    <% if signed_in? %>
+      <p>Welcome,
+    <%= link_to current_user.username, current_user %>!
+    <%= button_to "Sign out", :session, method: :delete %>
+    </p>
+  <% end %>
+  </div>
 </section>
 
-  <%= yield %>
+<%= yield %>
 </body>
 </html>
